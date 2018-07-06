@@ -50,7 +50,7 @@
     <None Include="appsettings.json" />
     <None Include="bower.json" />
     <None Include="bundleconfig.json" />
-    <None Include="Views\Results\WordCounterResults.cshtml" />
+    <None Include="Views\Results\index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="Models\MadLibs.cs" />

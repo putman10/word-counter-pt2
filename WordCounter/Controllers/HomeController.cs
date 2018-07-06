@@ -12,7 +12,6 @@ namespace WordCounter.Controllers
         [HttpGet("/")]
         public ActionResult WordCounterForm()
         {
-            
             return View();
         }
     }

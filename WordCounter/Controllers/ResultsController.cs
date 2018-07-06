@@ -10,7 +10,7 @@ namespace WordCounter.Controllers
     public class ResultsController : Controller
     {
         [HttpPost("/word_counter_results")]
-        public ActionResult WordCounterResults()
+        public ActionResult index()
         {
             RepeatCounter newCounter = new RepeatCounter();
             newCounter.SetSingleWord(Request.Form["singleWord"]);
