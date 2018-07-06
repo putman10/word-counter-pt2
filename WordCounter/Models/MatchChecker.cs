@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace WordCounter
 {
@@ -7,7 +8,17 @@ namespace WordCounter
 
         private string _singleWord;
         private string _listOfWords;
+        private static List<RepeatCounter> _jobListings = new List<RepeatCounter>() { };
 
+        public void UpdateList()
+        {
+            _jobListings.Add(this);
+        }
+
+        public List<RepeatCounter> GetList()
+        {
+            return _jobListings;
+        }
 
         public string GetSingleWord()
         {
