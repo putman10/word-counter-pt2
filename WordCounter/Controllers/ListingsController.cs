@@ -15,8 +15,8 @@ namespace WordCounter.Controllers
         public ActionResult Results(string word, string list)
         {
             RepeatCounter newRepeatCounter = new RepeatCounter(word, list);
-            newRepeatCounter.SetSingleWord(Request.Form["job-title"]);
-            newRepeatCounter.SetListOfWords(Request.Form["job-description"]);
+            newRepeatCounter.SetSingleWord(Request.Form["singleWord"]);
+            newRepeatCounter.SetListOfWords(Request.Form["listOfWords"]);
             return View("Results", newRepeatCounter);
         }
     }

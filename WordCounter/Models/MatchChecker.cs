@@ -15,14 +15,19 @@ namespace WordCounter
             this.SetListOfWords(list);
         }
 
+        public void SetSingleWord(string word)
+        {
+            _singleWord = word;
+        }
+
         public string GetSingleWord()
         {
             return _singleWord;
         }
 
-        public void SetSingleWord(string word)
+        public void SetListOfWords(string list)
         {
-            _singleWord = word;
+            _listOfWords = list;
         }
 
         public string GetListOfWords()
@@ -30,10 +35,6 @@ namespace WordCounter
             return _listOfWords;
         }
 
-        public void SetListOfWords(string list)
-        {
-            _listOfWords = list;
-        }
         
         public string RemoveSpacesandCharactersFromSingleWord(string word)
         {
