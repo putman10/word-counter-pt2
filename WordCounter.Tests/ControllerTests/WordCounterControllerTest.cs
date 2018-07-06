@@ -7,13 +7,13 @@ using WordCounter;
 namespace WordCounter.Tests
 {
     [TestClass]
-    public class ResultsControllerTest
+    public class WordCounterControllerTest
     {
         [TestMethod]
         public void Index_ReturnsCorrectView_True()
         {
             //Arrange
-            ResultsController controller = new ResultsController();
+            WordCounterController controller = new WordCounterController();
 
             //Act
             ActionResult indexView = controller.Results("dog", "dog dog");
@@ -26,7 +26,7 @@ namespace WordCounter.Tests
         public void Index_HasCorrectModelType_ItemList()
         {
             //Arrange
-            ViewResult indexView = new ResultsController().Results("dog", "dog dog") as ViewResult;
+            ViewResult indexView = new WordCounterController().Results("dog", "dog dog") as ViewResult;
 
             //Act
             var result = indexView.ViewData.Model;

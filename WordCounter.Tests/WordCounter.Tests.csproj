@@ -12,4 +12,12 @@
     <PackageReference Include="MSTest.TestFramework" Version="1.1.17" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="ModelTests\" />
+    <Folder Include="ControllerTests\" />
+  </ItemGroup>
+
+      <ItemGroup>
+    <ProjectReference Include="..\WordCounter\WordCounter.csproj" />
+  </ItemGroup>
 </Project>

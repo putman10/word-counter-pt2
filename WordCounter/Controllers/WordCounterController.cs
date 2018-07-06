@@ -9,7 +9,7 @@ using WordCounter;
 
 namespace WordCounter.Controllers
 {
-    public class ResultsController : Controller
+    public class WordCounterController : Controller
     {
         [HttpPost("/word_counter_results")]
         public ActionResult Results(string word, string list)
