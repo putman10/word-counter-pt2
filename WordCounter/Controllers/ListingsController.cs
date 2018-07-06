@@ -15,9 +15,9 @@ namespace WordCounter.Controllers
         public ActionResult Results(string word, string list)
         {
             RepeatCounter newRepeatCounter = new RepeatCounter(word, list);
-            newRepeatCounter.RemoveSpacesandCharactersFromSingleWord(Request.Form["singleWord"]);
-            newRepeatCounter.RemoveCharactersFromStringWords(Request.Form["listOfWords"]);
-            newRepeatCounter.Final(_singleClean, _listClean);
+            string singleWord = newRepeatCounter.RemoveSpacesandCharactersFromSingleWord(Request.Form["singleWord"]);
+            string listOfWords = newRepeatCounter.RemoveCharactersFromStringWords(Request.Form["listOfWords"]);
+            newRepeatCounter.Final(singleWord, listOfWords);
             return View("Results", newRepeatCounter);
         }
     }

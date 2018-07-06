@@ -58,6 +58,16 @@ namespace WordCounter
             return _listClean;
         }
 
+        public void SetMatches(int matches)
+        {
+            _matches = matches;
+        }
+
+        public int GetMatches()
+        {
+            return _matches;
+        }
+
         
         public string RemoveSpacesandCharactersFromSingleWord(string word)
         {
@@ -98,6 +108,7 @@ namespace WordCounter
 
             var arr = list.Split(new char[] { ' ', '.', ',', ';', ':', '?', '!' });
             var count = Array.FindAll(arr, s => s.Equals(word.Trim())).Length;
+            SetMatches(count);
             return count;
 
         }
