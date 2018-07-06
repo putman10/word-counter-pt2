@@ -94,12 +94,10 @@ namespace WordCounter
 
         public int Final(string word, string list)
         {
-
             var arr = list.Split(new char[] { ' ', '.', ',', ';', ':', '?', '!' });
             var count = Array.FindAll(arr, s => s.Equals(word.Trim())).Length;
             SetMatches(count);
             return count;
-
         }
     }
 }
