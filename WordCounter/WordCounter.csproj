@@ -8,7 +8,7 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore" Version="1.1.2" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="1.1.3" />
-    <PackageReference Include="Microsoft.AspNetCore.StaticFiles" Version="1.1.2" />
+    <PackageReference Include="Microsoft.AspNetCore.StaticFiles" Version="1.1.3" />
     <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="1.1.2" />
     <PackageReference Include="Microsoft.VisualStudio.Web.BrowserLink" Version="1.1.2" />
   </ItemGroup>
@@ -26,6 +26,10 @@
     <Content Remove="Views\Shared\_Layout.cshtml" />
     <Content Remove="Views\Home\MadLibsForm.cshtml" />
     <Content Remove="Views\Home\MadLibsResults.cshtml" />
+    <Content Remove="appsettings.Development.json" />
+    <Content Remove="appsettings.json" />
+    <Content Remove="bower.json" />
+    <Content Remove="bundleconfig.json" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="wwwroot\images\" />
@@ -37,7 +41,11 @@
   <ItemGroup>
     <None Include="wwwroot\css\styles.css" />
     <None Include="Views\Shared\_Layout.cshtml" />
-    <None Include="Views\Home\MadLibsForm.cshtml" />
-    <None Include="Views\Home\MadLibsResults.cshtml" />
+    <None Include="Views\Home\WordCounterForm.cshtml" />
+    <None Include="Views\Home\WordCounterResults.cshtml" />
+    <None Include="appsettings.Development.json" />
+    <None Include="appsettings.json" />
+    <None Include="bower.json" />
+    <None Include="bundleconfig.json" />
   </ItemGroup>
 </Project>

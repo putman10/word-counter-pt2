@@ -10,13 +10,13 @@ namespace MadLibsGame.Controllers
     public class HomeController : Controller
     {
         [Route("/")]
-        public ActionResult MadLibsForm()
+        public ActionResult WordCounterForm()
         {
             return View();
         }
 
-        [Route("/mad_libs_results")]
-        public ActionResult MadLibsResults()
+        [Route("/word_counter_results")]
+        public ActionResult WordCounterResults()
         {
             MadLibs newGame = new MadLibs();
             newGame.SetOccupation(Request.Query["occupation"]);
