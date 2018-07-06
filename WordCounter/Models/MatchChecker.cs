@@ -20,9 +20,9 @@ namespace WordCounter
             return _singleWord;
         }
 
-        public void SetSingleWord(string newSingleWord)
+        public void SetSingleWord(string word)
         {
-            _singleWord = newSingleWord;
+            _singleWord = word;
         }
 
         public string GetListOfWords()
@@ -30,51 +30,51 @@ namespace WordCounter
             return _listOfWords;
         }
 
-        public void SetListOfWords(string newListOfWords)
+        public void SetListOfWords(string list)
         {
-            _listOfWords = newListOfWords;
+            _listOfWords = list;
         }
         
-        public string RemoveSpacesandCharactersFromSingleWord(string inputOne)
+        public string RemoveSpacesandCharactersFromSingleWord(string word)
         {
             char[] charsToTrim = { ',', '{', ' ', '~', '`', '!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '+', '=' };
-            string singleInputWithoutCharacters = inputOne.Trim(charsToTrim);
+            string singleInputWithoutCharacters = word.Trim(charsToTrim);
             ConvertSingleWordToLowerCase(singleInputWithoutCharacters);
             return singleInputWithoutCharacters;
         }
 
-        public string RemoveCharactersFromStringWords(string inputTwo)
+        public string RemoveCharactersFromStringWords(string list)
         {
             string[] chars = new string[] { ",", ".", "/", "!", "@", "#", "$", "%", "^", "&", "*", "'", "\"", ";", "_", "(", ")", ":", "|", "[", "]" };
 
             for (int i = 0; i < chars.Length; i++)
             {
-                if (inputTwo.Contains(chars[i]))
+                if (list.Contains(chars[i]))
                 {
-                    inputTwo = inputTwo.Replace(chars[i], "");
+                    list = list.Replace(chars[i], "");
                 }
             }
-            ConvertStringOfWordsToLowerCase(inputTwo);
-            return inputTwo;
+            ConvertStringOfWordsToLowerCase(list);
+            return list;
         }
 
-        public string ConvertSingleWordToLowerCase(string inputOne)
+        public string ConvertSingleWordToLowerCase(string word)
         {
-            string lowerCaseInputOne = inputOne.ToLowerInvariant();
+            string lowerCaseInputOne = word.ToLowerInvariant();
             return lowerCaseInputOne;
         }
 
-        public string ConvertStringOfWordsToLowerCase(string inputTwo)
+        public string ConvertStringOfWordsToLowerCase(string list)
         {
-            string lowerCaseInputTwo = inputTwo.ToLowerInvariant();
+            string lowerCaseInputTwo = list.ToLowerInvariant();
             return lowerCaseInputTwo;
         }
 
-        public int Final(string inputOne, string inputTwo)
+        public int Final(string word, string list)
         {
 
-            var arr = inputTwo.Split(new char[] { ' ', '.', ',', ';', ':', '?', '!' });
-            var count = Array.FindAll(arr, s => s.Equals(inputOne.Trim())).Length;
+            var arr = list.Split(new char[] { ' ', '.', ',', ';', ':', '?', '!' });
+            var count = Array.FindAll(arr, s => s.Equals(word.Trim())).Length;
             return count;
 
         }
