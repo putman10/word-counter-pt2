@@ -91,17 +91,6 @@ namespace WordCounter
             return list;
         }
 
-        //public string ConvertSingleWordToLowerCase(string word)
-        //{
-        //    string lowerCaseInputOne = word.ToLowerInvariant();
-        //    return lowerCaseInputOne;
-        //}
-
-        //public string ConvertStringOfWordsToLowerCase(string list)
-        //{
-        //    string lowerCaseInputTwo = list.ToLowerInvariant();
-        //    return lowerCaseInputTwo;
-        //}
 
         public int Final(string word, string list)
         {
