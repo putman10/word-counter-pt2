@@ -1,0 +1,42 @@
+﻿body {
+    background: #007bff82;
+}
+
+.jumbotron {
+    text-align: center;
+    background: #ffc107;
+}
+
+.container {
+    background: white;
+    padding: 15px;
+}
+
+.btn-info {
+    color: black;
+    background-color: #ffc107;
+    border-color: #bf9107;
+}
+
+.btn-info:hover {
+    color: white;
+    background-color: #eab61a;
+    border-color: #bf9107;
+
+}
+
+.jobs {
+    border: 1px solid black;
+    padding: 10px;
+    margin-bottom: 15px
+}
+
+.jobs p:first-of-type {
+    padding-top: 1rem;
+    background: #ffc107;
+    padding: 5px 5px 5px 15px;
+    font-size: 30px;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 700
+}

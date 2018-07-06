@@ -1,0 +1,55 @@
+@{
+  Layout = "_Layout";
+}
+
+  <div class='container'>
+    <div class="jumbotron">
+      <h1>Mad Libs 2.0</h1>
+    </div>
+    <div class="form">
+      <p>Fill out the fields below and hit submit to create a fun Mad Libs adventure:</p>
+      <form id="madlibs-form" action="/mad_libs_results" method="get">
+        <div class="form-group">
+          <label for="occupation">Occupation:</label>
+          <input class="form-control" id="occupation" type="text" name="occupation" required>
+        </div>
+        <div class="form-group">
+          <label for="nounOne">Noun One:</label>
+          <input class="form-control" id="nounOne" type="text" name="nounOne" required>
+        </div>
+        <div class="form-group">
+          <label for="nounTwo">Noun Two:</label>
+          <input class="form-control" id="nounTwo" type="text" name="nounTwo" required>
+        </div>
+        <div class="form-group">
+          <label for="nounThree">Noun Three:</label>
+          <input class="form-control" id="nounThree" type="text" name="nounThree" required>
+        </div>
+        <div class="form-group">
+          <label for="nounFour">Noun Four:</label>
+          <input class="form-control" id="nounFour" type="text" name="nounFour" required>
+        </div>
+        <div class="form-group">
+          <label for="adjectiveOne">Adjective One:</label>
+          <input class="form-control" id="adjectiveOne" type="text" name="adjectiveOne" required>
+        </div>
+        <div class="form-group">
+          <label for="adjectiveTwo">Adjective Two:</label>
+          <input class="form-control" id="adjectiveTwo" type="text" name="adjectiveTwo" required>
+        </div>
+        <div class="form-group">
+          <label for="verbOne">Verb One:</label>
+          <input class="form-control" id="verbOne" type="text" name="verbOne" required>
+        </div>
+        <div class="form-group">
+          <label for="verbTwo">Verb Two:</label>
+          <input class="form-control" id="verbTwo" type="text" name="verbTwo" required>
+        </div>
+        <div class="form-group">
+          <label for="verbThree">Verb Three:</label>
+          <input class="form-control" id="verbThree" type="text" name="verbThree" required>
+        </div>
+        <button id="form-submit" class="btn btn-danger" type="submit" name="button">Submit</button>
+      </form>
+    </div>
+  </div>
