@@ -11,14 +11,13 @@ namespace WordCounter.Controllers
 {
     public class ListingsController : Controller
     {
-        [HttpPost("/word_counter_results/")]
-        public ActionResult Results()
+        [HttpPost("/word_counter_results")]
+        public ActionResult Results(string word, string list)
         {
-            RepeatCounter newRepeatCounter = new RepeatCounter();
+            RepeatCounter newRepeatCounter = new RepeatCounter(word, list);
             newRepeatCounter.SetSingleWord(Request.Form["job-title"]);
             newRepeatCounter.SetListOfWords(Request.Form["job-description"]);
-            newRepeatCounter.UpdateList();
-            return View(newRepeatCounter.GetList());
+            return View("Results", newRepeatCounter);
         }
     }
 }

@@ -8,7 +8,12 @@ namespace WordCounter
 
         private string _singleWord;
         private string _listOfWords;
-        private static List<RepeatCounter> _jobListings = new List<RepeatCounter>() { };
+
+        public RepeatCounter(string word, string list)
+        {
+            this.SetSingleWord(word);
+            this.SetListOfWords(list);
+        }
 
         public string GetSingleWord()
         {
@@ -28,16 +33,6 @@ namespace WordCounter
         public void SetListOfWords(string newListOfWords)
         {
             _listOfWords = newListOfWords;
-        }
-
-        public void UpdateList()
-        {
-            _jobListings.Add(this);
-        }
-
-        public List<RepeatCounter> GetList()
-        {
-            return _jobListings;
         }
         
         public string RemoveSpacesandCharactersFromSingleWord(string inputOne)
