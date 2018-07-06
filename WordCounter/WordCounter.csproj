@@ -30,6 +30,8 @@
     <Content Remove="appsettings.json" />
     <Content Remove="bower.json" />
     <Content Remove="bundleconfig.json" />
+    <Content Remove="Views\Home\WordCounterForm.cshtml" />
+    <Content Remove="Views\Home\WordCounterResults.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="wwwroot\images\" />
