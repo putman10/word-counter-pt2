@@ -19,8 +19,8 @@ namespace WordCounter.Controllers
         public ActionResult WordCounterResults()
         {
             RepeatCounter newCounter = new RepeatCounter();
-            newCounter.SetOccupation(Request.Query["singleWord"]);
-            newCounter.SetNounOne(Request.Query["listOfWords"]);
+            newCounter.SetSingleWord(Request.Query["singleWord"]);
+            newCounter.SetListOfWords(Request.Query["listOfWords"]);
             return View(newCounter);
         }
     }

@@ -5,28 +5,28 @@ namespace WordCounter
     public class RepeatCounter
     {
 
-        private string _occupation;
-        private string _nounOne;
+        private string _singleWord;
+        private string _listOfWords;
 
 
-        public string GetOccupation()
+        public string GetSingleWord()
         {
-            return _occupation;
+            return _singleWord;
         }
 
-        public void SetOccupation(string newOccupation)
+        public void SetSingleWord(string newSingleWord)
         {
-            _occupation = newOccupation;
+            _singleWord = newSingleWord;
         }
 
-        public string GetNounOne()
+        public string GetListOfWords()
         {
-            return _nounOne;
+            return _listOfWords;
         }
 
-        public void SetNounOne(string newNounOne)
+        public void SetListOfWords(string newListOfWords)
         {
-            _nounOne = newNounOne;
+            _listOfWords = newListOfWords;
         }
         
         public string RemoveSpacesandCharactersFromSingleWord(string inputOne)
