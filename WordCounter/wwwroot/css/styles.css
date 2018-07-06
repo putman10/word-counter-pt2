@@ -11,7 +11,9 @@
     background: white;
     padding: 15px;
 }
-
+.splash {
+    text-align:center;
+}
 #results {
     text-align: center;
 }
