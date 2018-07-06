@@ -32,6 +32,7 @@
     <Content Remove="bundleconfig.json" />
     <Content Remove="Views\Home\WordCounterForm.cshtml" />
     <Content Remove="Views\Home\WordCounterResults.cshtml" />
+    <Content Remove="Views\Results\WordCounterResults.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="wwwroot\images\" />
@@ -39,16 +40,17 @@
     <Folder Include="Views\Shared\" />
     <Folder Include="Views\Home\" />
     <Folder Include="Models\" />
+    <Folder Include="Views\Results\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="wwwroot\css\styles.css" />
     <None Include="Views\Shared\_Layout.cshtml" />
     <None Include="Views\Home\WordCounterForm.cshtml" />
-    <None Include="Views\Home\WordCounterResults.cshtml" />
     <None Include="appsettings.Development.json" />
     <None Include="appsettings.json" />
     <None Include="bower.json" />
     <None Include="bundleconfig.json" />
+    <None Include="Views\Results\WordCounterResults.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="Models\MadLibs.cs" />
