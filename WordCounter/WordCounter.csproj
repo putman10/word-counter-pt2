@@ -50,4 +50,7 @@
     <None Include="bower.json" />
     <None Include="bundleconfig.json" />
   </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Models\MadLibs.cs" />
+  </ItemGroup>
 </Project>
