@@ -1,0 +1,11 @@
+@{
+  Layout = "_Layout";
+}
+
+<div class='container' id="results">
+    <h1>Word Count Results:</h1>
+    <p>Single Word: @Model.GetCleanWord()</p>
+    <p>List of Words: @Model.GetCleanList()</p>
+    <p>Number of Matches: @Model.GetMatches()</p>
+    <a href="/" class="btn btn-danger">Match New Words</a>
+</div>

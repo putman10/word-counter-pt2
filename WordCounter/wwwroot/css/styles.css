@@ -12,6 +12,18 @@
     padding: 15px;
 }
 
+#results {
+    text-align: center;
+}
+
+#results h1{
+    margin-bottom:3rem;
+}
+
+#results p:last-of-type{
+    margin-bottom:3rem;
+}
+
 .btn-info {
     color: black;
     background-color: #ffc107;
