@@ -7,15 +7,15 @@
       <h1>Word Counter 2.0</h1>
     </div>
     <div class="form">
-      <p>Fill out the fields below and hit submit to create a fun Mad Libs adventure:</p>
-      <form id="madlibs-form" action="/word_counter_results" method="get">
+      <p>Enter a single word and any number of words in the two designated spaces to find out the number of times the single word appears in the list of words!</p>
+      <form id="word-counter-form" action="/word_counter_results" method="get">
         <div class="form-group">
-          <label for="occupation">Occupation:</label>
-          <input class="form-control" id="occupation" type="text" name="occupation" required>
+          <label for="singleWord">Single Word:</label>
+          <input class="form-control" id="singleWord" type="text" name="singleWord" required>
         </div>
         <div class="form-group">
-          <label for="nounOne">Noun One:</label>
-          <input class="form-control" id="nounOne" type="text" name="nounOne" required>
+          <label for="listOfWords">List of Words</label>
+          <input class="form-control" id="listOfWords" type="textarea" name="listOfWords" required>
         </div>
         <button id="form-submit" class="btn btn-danger" type="submit" name="button">Submit</button>
       </form>
