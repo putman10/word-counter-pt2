@@ -88,7 +88,7 @@ namespace WordCounter
                 }
             }
             SetCleanList(list.ToLowerInvariant());
-            return list;
+            return list.ToLowerInvariant();
         }
 
 
