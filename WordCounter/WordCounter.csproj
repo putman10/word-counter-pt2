@@ -45,7 +45,7 @@
   <ItemGroup>
     <None Include="wwwroot\css\styles.css" />
     <None Include="Views\Shared\_Layout.cshtml" />
-    <None Include="Views\Home\Index.cshtml" />
+    <None Include="Views\Home\Game.cshtml" />
     <None Include="appsettings.Development.json" />
     <None Include="appsettings.json" />
     <None Include="bower.json" />

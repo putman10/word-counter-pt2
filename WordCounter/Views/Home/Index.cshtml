@@ -1,23 +1,9 @@
-@{
+﻿@{
   Layout = "_Layout";
 }
 
-  <div class='container'>
-    <div class="jumbotron">
-      <h1>Word Counter 2.0</h1>
-    </div>
+<div class='container'>
     <div class="form">
-      <p>Enter a single word and any number of words in the two designated spaces to find out the number of times the single word appears in the list of words!</p>
-      <form id="word-counter-form" action="/word_counter_results" method="post">
-        <div class="form-group">
-          <label for="singleWord">Single Word:</label>
-          <input class="form-control" id="singleWord" type="text" name="singleWord" required>
-        </div>
-        <div class="form-group">
-          <label for="listOfWords">List of Words</label>
-          <input class="form-control" id="listOfWords" type="text" name="listOfWords" required>
-        </div>
-        <button id="form-submit" class="btn btn-danger" type="submit" name="button">Submit</button>
-      </form>
+        <a href="/game" class="btn btn-danger">Play Game</a>
     </div>
-  </div>
+</div>
