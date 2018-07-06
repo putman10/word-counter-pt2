@@ -40,17 +40,17 @@
     <Folder Include="Views\Shared\" />
     <Folder Include="Views\Home\" />
     <Folder Include="Models\" />
-    <Folder Include="Views\Results\" />
+    <Folder Include="Views\Listings\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="wwwroot\css\styles.css" />
     <None Include="Views\Shared\_Layout.cshtml" />
-    <None Include="Views\Home\WordCounterForm.cshtml" />
+    <None Include="Views\Home\Index.cshtml" />
     <None Include="appsettings.Development.json" />
     <None Include="appsettings.json" />
     <None Include="bower.json" />
     <None Include="bundleconfig.json" />
-    <None Include="Views\Results\index.cshtml" />
+    <None Include="Views\Listings\Results.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="Models\MadLibs.cs" />
