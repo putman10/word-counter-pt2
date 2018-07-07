@@ -33,6 +33,7 @@
     <Content Remove="Views\Home\WordCounterForm.cshtml" />
     <Content Remove="Views\Home\WordCounterResults.cshtml" />
     <Content Remove="Views\Results\WordCounterResults.cshtml" />
+    <Content Remove="wwwroot\images\letters.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="wwwroot\images\" />
@@ -51,6 +52,7 @@
     <None Include="bower.json" />
     <None Include="bundleconfig.json" />
     <None Include="Views\WordCounter\Results.cshtml" />
+    <None Include="wwwroot\images\letters.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="Models\MadLibs.cs" />

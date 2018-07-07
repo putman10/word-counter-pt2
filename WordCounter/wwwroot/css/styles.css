@@ -2,6 +2,9 @@
     background: #007bff82;
 }
 
+img {
+    max-width:100%;
+}
 .jumbotron {
     text-align: center;
     background: #ffc107;
@@ -14,6 +17,11 @@
 .splash {
     text-align:center;
 }
+
+.splash img{
+    margin-bottom:3rem;
+}
+
 #results {
     text-align: center;
 }
