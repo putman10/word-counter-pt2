@@ -68,34 +68,36 @@ namespace WordCounter
             return _matches;
         }
 
-        
-        public string RemoveSpacesandCharactersFromSingleWord(string word)
+
+        public string RemoveSpacesandCharactersFromSingleWord()
         {
             char[] charsToTrim = { ',', '{', ' ', '~', '`', '!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '+', '=' };
-            string singleInputWithoutCharacters = word.Trim(charsToTrim).ToLowerInvariant();
+            string singleInputWithoutCharacters = _singleWord.Trim(charsToTrim).ToLowerInvariant();
             SetCleanWord(singleInputWithoutCharacters);
             return singleInputWithoutCharacters;
         }
 
-        public string RemoveCharactersFromStringWords(string list)
+        public string RemoveCharactersFromStringWords()
         {
             string[] chars = new string[] { ",", ".", "/", "!", "@", "#", "$", "%", "^", "&", "*", "'", "\"", ";", "_", "(", ")", ":", "|", "[", "]" };
             for (int i = 0; i < chars.Length; i++)
             {
-                if (list.Contains(chars[i]))
+                if (_listOfWords.Contains(chars[i]))
                 {
-                    list = list.Replace(chars[i], "");
+                    _listOfWords = _listOfWords.Replace(chars[i], "");
                 }
             }
-            SetCleanList(list.ToLowerInvariant());
-            return list.ToLowerInvariant();
+            SetCleanList(_listOfWords.ToLowerInvariant());
+            return _listClean.ToLowerInvariant();
         }
 
 
-        public int Final(string word, string list)
+        public int Final()
         {
-            var arr = list.Split(new char[] { ' ', '.', ',', ';', ':', '?', '!' });
-            var count = Array.FindAll(arr, s => s.Equals(word.Trim())).Length;
+            RemoveCharactersFromStringWords();
+            RemoveSpacesandCharactersFromSingleWord();
+            var arr = _listClean.Split(new char[] { ' ', '.', ',', ';', ':', '?', '!' });
+            var count = Array.FindAll(arr, s => s.Equals(_singleClean.Trim())).Length;
             SetMatches(count);
             return count;
         }

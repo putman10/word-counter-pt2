@@ -12,10 +12,10 @@ namespace WordCounter.Controllers
     public class WordCounterController : Controller
     {
         [HttpPost("/word_counter_results")]
-        public ActionResult Results(string word, string list)
+        public ActionResult Results(string singleWord, string listOfWords)
         {
-            RepeatCounter newRepeatCounter = new RepeatCounter(word, list);
-            newRepeatCounter.Final(newRepeatCounter.RemoveSpacesandCharactersFromSingleWord(Request.Form["singleWord"]), newRepeatCounter.RemoveCharactersFromStringWords(Request.Form["listOfWords"]));
+            RepeatCounter newRepeatCounter = new RepeatCounter(singleWord, listOfWords);
+            newRepeatCounter.Final();
             return View("Results", newRepeatCounter);
         }
     }

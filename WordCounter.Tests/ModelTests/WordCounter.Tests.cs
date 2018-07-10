@@ -13,7 +13,7 @@ namespace WordCounter.Tests
         {
             string userInput = "dog";
             RepeatCounter testRepeatCounter = new RepeatCounter("dog", "dog dog");
-            Assert.AreEqual("dog", testRepeatCounter.RemoveSpacesandCharactersFromSingleWord(userInput));
+            Assert.AreEqual("dog", testRepeatCounter.RemoveSpacesandCharactersFromSingleWord());
         }
 
         [TestMethod]
@@ -21,7 +21,7 @@ namespace WordCounter.Tests
         {
             string userInput = "is your dog happy";
             RepeatCounter testRepeatCounter = new RepeatCounter("dog", "dog dog");
-            Assert.AreEqual("is your dog happy", testRepeatCounter.RemoveCharactersFromStringWords(userInput));
+            Assert.AreEqual("is your dog happy", testRepeatCounter.RemoveCharactersFromStringWords());
         }
 
         [TestMethod]
@@ -29,7 +29,7 @@ namespace WordCounter.Tests
         {
             string userInput = "dog! ";
             RepeatCounter testRepeatCounter = new RepeatCounter("dog", "dog dog");
-            Assert.AreEqual("dog", testRepeatCounter.RemoveSpacesandCharactersFromSingleWord(userInput));
+            Assert.AreEqual("dog", testRepeatCounter.RemoveSpacesandCharactersFromSingleWord());
         }
 
         [TestMethod]
@@ -37,7 +37,7 @@ namespace WordCounter.Tests
         {
             string userInput = "is your dog happ$y";
             RepeatCounter testRepeatCounter = new RepeatCounter("dog", "dog dog");
-            Assert.AreEqual("is your dog happy", testRepeatCounter.RemoveCharactersFromStringWords(userInput));
+            Assert.AreEqual("is your dog happy", testRepeatCounter.RemoveCharactersFromStringWords());
         }
 
         [TestMethod]
@@ -45,7 +45,7 @@ namespace WordCounter.Tests
         {
             string userInput = "Dog";
             RepeatCounter testRepeatCounter = new RepeatCounter("dog", "dog dog");
-            Assert.AreEqual("dog", testRepeatCounter.RemoveSpacesandCharactersFromSingleWord(userInput));
+            Assert.AreEqual("dog", testRepeatCounter.RemoveSpacesandCharactersFromSingleWord());
         }
 
         [TestMethod]
@@ -53,16 +53,14 @@ namespace WordCounter.Tests
         {
             string userInput = "Is Your Dog Happy";
             RepeatCounter testRepeatCounter = new RepeatCounter("dog", "dog dog");
-            Assert.AreEqual("is your dog happy", testRepeatCounter.RemoveCharactersFromStringWords(userInput));
+            Assert.AreEqual("is your dog happy", testRepeatCounter.RemoveCharactersFromStringWords());
         }
 
         [TestMethod]
         public void Final_NumberOfInstances_int()
         {
-            string userWord = "dog";
-            string userWords = "is your dog happy";
-            RepeatCounter testRepeatCounter = new RepeatCounter("dog", "dog dog");
-            Assert.AreEqual(1, testRepeatCounter.Final(userWord, userWords));
+            RepeatCounter testRepeatCounter = new RepeatCounter("dog", "is your dog happy");
+            Assert.AreEqual(1, testRepeatCounter.Final());
         }
     }
 }

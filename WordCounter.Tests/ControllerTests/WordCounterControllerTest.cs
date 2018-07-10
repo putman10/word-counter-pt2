@@ -26,10 +26,11 @@ namespace WordCounter.Tests
         public void Index_HasCorrectModelType_ItemList()
         {
             //Arrange
-            ViewResult indexView = new WordCounterController().Results("dog", "dog dog") as ViewResult;
+            WordCounterController controller = new WordCounterController();
+            ViewResult resultsView = controller.Results("dog", "dog dog") as ViewResult;
 
             //Act
-            var result = indexView.ViewData.Model;
+            var result = resultsView.ViewData.Model;
 
             //Assert
             Assert.IsInstanceOfType(result, typeof(string));
